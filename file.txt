@@ -1,80 +1,31 @@
-import java.util.Scanner;
+def CountSwap(s, n):
+	s = list(s)
+	count = 0
+	ans = True
+	for i in range(n // 2):
+		left = i
+		right = n - left - 1
+		while left < right:
+			if s[left] == s[right]:
+				break
+			else:
+				right -= 1
+		if left == right:
+			ans = False
+			break
+		else:
+			for j in range(right, n - left - 1):
+				(s[j], s[j + 1]) = (s[j + 1], s[j])
+				count += 1
+	if ans:
+		return (count)
+	else:
+		return -1
 
-abstract class Employee{
-	abstract void setSalary(int salary);
-	abstract int getSalary();
-	abstract void setGrade(String grade);
-	abstract String getGrade();
-	void label() {
-		System.out.print("Employee's data:\n");
-	}
-}
-class Engineer extends Employee{
-	private int salary;
-	private String grade;
-	@Override
-	void label() {
-		System.out.print("Employee's data:\n");
-	}
-	void setSalary(int salary) {
-		this.salary=salary;
-	}
-	void setGrade(String grade) {
-		this.grade=grade;
-	}
-	int getSalary() {
-		return this.salary;
-	}
-	String getGrade() {
-		return this.grade;
-	}
-}
-class Manager extends Employee{
-	private int salary;
-	private String grade;
-	@Override
-	void label() {
-		System.out.print("Employee's data:\n");
-	}
-	void setSalary(int salary) {
-		this.salary=salary;
-	}
-	void setGrade(String grade) {
-		this.grade=grade;
-	}
-	int getSalary() {
-		return this.salary;
-	}
-	String getGrade() {
-		return this.grade;
-	}
-}
-public class Main {
+s = 'abca'
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int input=Integer.parseInt(sc.nextLine());
-		Engineer e =new Engineer();
-		Manager m= new Manager();
-		for(int i=0;i<input;i++) {
-			String cdata=sc.nextLine();
-			String[] cdataArr=cdata.split(" ");
-			if(cdataArr[0].equals("ENGINEER")) {
-				e.setGrade(cdataArr[1]);
-				e.setSalary(Integer.parseInt(cdataArr[2]));
-			}
-			else if(cdataArr[0].equals("MANAGER")) {
-				m.setGrade(cdataArr[1]);
-				m.setSalary(Integer.parseInt(cdataArr[2]));
-			}
-		}
-		e.label();
-		System.out.println("GRADE : "+e.getGrade());
-		System.out.println("SALARY : "+e.getSalary());
-		m.label();
-		System.out.println("GRADE : "+m.getGrade());
-		System.out.println("SALARY : "+m.getSalary());
-	}
+n = len(s)
 
-}
+ans1 = CountSwap(s, n)
+ans2 = CountSwap(s[::-1], n)
+print(max(ans1, ans2))
