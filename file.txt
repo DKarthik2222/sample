@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-class UserMainCode{
+class PlacementClass{
 	public int[] placement(int input1,int[] input2){
 		int[] output=new int[input1];
 		int counter=0;
@@ -18,7 +18,8 @@ class UserMainCode{
 //		throw new UnsupportedOperationException("placement(int input1,int[] input2)");
 	}
 }
-public class Main {
+
+public class UserMainCode {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,8 +29,8 @@ public class Main {
 		for(int i=0;i<input1;i++){
 			input2[i]=sc.nextInt();
 		}
-		UserMainCode umc=new UserMainCode();
-		System.out.println(Arrays.toString(umc.placement(input1, input2)));;
+		PlacementClass pc=new PlacementClass();
+		System.out.println(Arrays.toString(pc.placement(input1, input2)));
 	}
 
 }
