@@ -1,1 +1,1 @@
-https://spring-boot-mongodb.s3.ap-south-1.amazonaws.com/hotel-management-0.0.1-SNAPSHOT.jar
+http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms/r1
