@@ -1,0 +1,48 @@
+---------------- USER ---------------------
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addUser (register POST)
+sample data:
+{
+    "id": "u2",
+    "firstName": "James",
+    "lastName": "Bond",
+    "email": "james@gmail.com",
+    "mobileNum": "1234567890",
+    "password": "james1234",
+    "wallet": 10
+}
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateUser/{id} (update only wallet PUT)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers (list all users GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers/{id} (find user by id GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteUser/{id} (delete user DELETE)
+--------------- ROOM ------------------------
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateRoom/{id} (update only room "bookings" info PUT)
+sample data:
+{
+    "id": "r1",
+    "roomType": "Metro",
+    "cost": 800,
+    "capacity": 4,
+    "bookings": [{
+        "bookingStatus": true,
+        "bookingFrom": "2021-05-12",
+        "bookingTo": "2021-05-14"
+    }]
+}
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms (list all rooms GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms/{id} (get room by id GET)
+--------------- BOOKINGS ---------------------
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addBooking (add booking details POST)
+sample data:
+{
+    "id": "b1",
+    "uId": "u1",
+    "rId": "r1",
+    "bookedDays": 2,
+    "bookedFrom": "2021-05-06",
+    "bookedTo": "2021-05-07",
+    "costPerDay": 350
+}
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateBookings/{id} (update booking details, all details must be given PUT)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllBookings (list all bookings GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllBookings/{id} (get booking details by id GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteBooking/{id} (delete booking DELETE)
