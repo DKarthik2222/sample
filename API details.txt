@@ -7,14 +7,17 @@ sample data:
     "lastName": "Bond",
     "email": "james@gmail.com",
     "mobileNum": "1234567890",
+    "aadhar":"123456789012",
     "password": "james1234",
     "wallet": 10
 }
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateUser/{id} (update only wallet PUT)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateWallet/{id} (update only wallet PUT)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updatePassword/{id} (update only password PUT)
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers (list all users GET)
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers/{id} (find user by id GET)
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteUser/{id} (delete user DELETE)
 --------------- ROOM ------------------------
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addRoom (add room from admin only POST)
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateRoom/{id} (update only room "bookings" info PUT)
 sample data:
 {
@@ -30,6 +33,7 @@ sample data:
 }
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms (list all rooms GET)
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms/{id} (get room by id GET)
+==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteRoom/{id} (delete room from admin only DELETE)
 --------------- BOOKINGS ---------------------
 ==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addBooking (add booking details POST)
 sample data:
@@ -37,6 +41,7 @@ sample data:
     "id": "b1",
     "uId": "u1",
     "rId": "r1",
+"currentStatus": true
     "bookedDays": 2,
     "bookedFrom": "2021-05-06",
     "bookedTo": "2021-05-07",
