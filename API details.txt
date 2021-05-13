@@ -1,5 +1,5 @@
 ---------------- USER ---------------------
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addUser (register POST)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/addUser (register POST)
 sample data:
 {
     "id": "u2",
@@ -11,14 +11,14 @@ sample data:
     "password": "james1234",
     "wallet": 10
 }
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateWallet/{id} (update only wallet PUT)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updatePassword/{id} (update only password PUT)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers (list all users GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllUsers/{id} (find user by id GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteUser/{id} (delete user DELETE)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/updateWallet/{id} (update only wallet PUT)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/updatePassword/{id} (update only password PUT)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllUsers (list all users GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllUsers/{id} (find user by id GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/deleteUser/{id} (delete user DELETE)
 --------------- ROOM ------------------------
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addRoom (add room from admin only POST)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateRoom/{id} (update only room "bookings" info PUT)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/addRoom (add room from admin only POST)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/updateRoom/{id} (update only room "bookings" info PUT)
 sample data:
 {
     "id": "r1",
@@ -31,11 +31,11 @@ sample data:
         "bookingTo": "2021-05-14"
     }]
 }
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms (list all rooms GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllRooms/{id} (get room by id GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteRoom/{id} (delete room from admin only DELETE)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllRooms (list all rooms GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllRooms/{id} (get room by id GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/deleteRoom/{id} (delete room from admin only DELETE)
 --------------- BOOKINGS ---------------------
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/addBooking (add booking details POST)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/addBooking (add booking details POST)
 sample data:
 {
     "id": "b1",
@@ -47,7 +47,7 @@ sample data:
     "bookedTo": "2021-05-07",
     "costPerDay": 350
 }
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/updateBookings/{id} (update booking details, all details must be given PUT)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllBookings (list all bookings GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/findAllBookings/{id} (get booking details by id GET)
-==> http://ec2-13-234-17-222.ap-south-1.compute.amazonaws.com:8080/deleteBooking/{id} (delete booking DELETE)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/updateBookings/{id} (update booking details, all details must be given PUT)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllBookings (list all bookings GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/findAllBookings/{id} (get booking details by id GET)
+==> http://ec2-3-108-66-146.ap-south-1.compute.amazonaws.com:8080/deleteBooking/{id} (delete booking DELETE)
